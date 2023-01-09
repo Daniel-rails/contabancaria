@@ -1,0 +1,14 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <b>Valor:</b>
+  <%= @saque.valor %>
+</p>
+<p>
+  <b>Conta:</b>
+  <%= @saque.conta %>
+</p>
+<%= link_to 'Edit', edit_saque_path(@saque) %>
+\|
+<%= link_to 'Back', saques_path %>

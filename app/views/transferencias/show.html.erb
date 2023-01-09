@@ -1,0 +1,22 @@
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <b>Valor:</b>
+  <%= @transferencia.valor %>
+</p>
+<p>
+  <b>Conta origem:</b>
+  <%= @transferencia.conta_origem %>
+</p>
+<p>
+  <b>Conta destino:</b>
+  <%= @transferencia.conta_destino %>
+</p>
+<p>
+  <b>Taxa:</b>
+  <%= @transferencia.taxa %>
+</p>
+<%= link_to 'Edit', edit_transferencia_path(@transferencia) %>
+\|
+<%= link_to 'Back', transferencias_path %>

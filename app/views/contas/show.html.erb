@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col s12">
+    <h4>
+      <%= "Conta Corrente - #{@conta.numero}" %>
+    </h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m12 l4">
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">attach_money</i>
+          Mostrar Saldo
+        </div>
+        <div class="collapsible-body">
+          <div class="row">
+            <div class="col s12">
+              <h5>
+                <%= number_to_currency(@conta.saldo) %>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col s12 m12 l8">
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">account_balance</i>
+          Extrato
+        </div>
+        <div class="collapsible-body">
+          <div class="row">
+            <%= simple_form_for :search, url: extrato_conta_path, method: :get, remote: true, html: {class: 'col s12'} do |f| %>
+              <div class="row">
+                <div class="input-field col s4">
+                  <%= f.input :dt_inicial, label: false, input_html: { placeholder: 'Data Inicial', class: 'datepicker' } %>
+                </div>
+                <div class="input-field col s4">
+                  <%= f.input :dt_final, label: false, input_html: { placeholder: 'Data Final', class: 'datepicker' } %>
+                </div>
+                <div class="col s3 valign-wrapper">
+                  <button class="btn btn-large waves-effect waves-light" name="action" type="submit">Extrato</button>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <div class="row">
+            <div id="extrato"></div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

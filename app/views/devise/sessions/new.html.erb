@@ -1,0 +1,19 @@
+<h2>Entrar na Conta</h2>
+<div class="row">
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'col s12' }) do |f| %>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.input :email, label: false, required: false, autofocus: true, input_html: { autocomplete: "email", placeholder: 'Email' } %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.input :password, label: false, required: false, input_html: { autocomplete: "current-password", placeholder: 'Senha' } %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="teste col-s12 right-align">
+        <%= f.button :submit, "Entrar" %>
+      </div>
+    </div>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>
