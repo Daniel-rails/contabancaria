@@ -32,3 +32,5 @@ gem 'devise'
 gem "haml-rails", "~> 2.0"
 gem 'simple_form'
 gem "paranoia", "~> 2.2"
+#erro ao subir no heroku
+gem 'mini_portile2', '~> 2.8', '>= 2.8.1'
