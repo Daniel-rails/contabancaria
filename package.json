@@ -1,6 +1,7 @@
 {
   "name": "conta_bancaria",
   "private": true,
+  "node": "4.1.1",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@rails/actioncable": "^6.0.0",
@@ -13,7 +14,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.11.0",
-    "node": "4.1.1" 
+    "webpack-dev-server": "^3.11.0"
   }
 }
