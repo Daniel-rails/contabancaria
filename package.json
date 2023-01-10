@@ -2,7 +2,7 @@
   "name": "conta_bancaria",
   "private": true,
   "engines": {
-    "node": ">=12.22.12"
+    "node": "12.22.12"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
